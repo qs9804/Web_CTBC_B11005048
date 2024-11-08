@@ -1,0 +1,232 @@
+* {
+    font-family: 微軟正黑體;
+    /* p0+m0 */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* background: #000; */
+}
+
+/* 導覽列 */
+nav {
+    /* 定位：固定 */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+#nav {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    width: 1200px;
+    /* background: #333; */
+    margin: 35px auto;
+    
+}
+
+#logo img {
+    width: 200px;
+}
+
+#link {
+    /* tar 靠右對齊 */
+    text-align: right;
+    padding-top: 18px;
+}
+
+#social {
+    padding-top: 15px;
+    padding-left: 50px;
+}
+
+a {
+    color: white;
+    /* td 文字裝飾：無 (沒有底線) */
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 20px;
+    /* 轉場：秒數s */
+    transition: 0.6s;
+}
+
+a:hover {
+    color: #F5BB23;
+}
+
+/* 橫幅 */
+#banner {
+    background-image: url(./img/banner.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+/* 內容區域 */
+.content {
+    background-image: url(./img/paper.png);
+    /* height: 600px; */
+}
+
+h1 {
+    text-align: center;
+    color: #555;
+    padding: 20px 0;
+    /* fw200 文字粗細 */
+    font-weight: 200;
+}
+
+/* 最新消息 */
+#news {
+    /* 顯示：格線模式 */
+    display: grid;
+    /* 格線模板欄位：重複設定(重複幾次，單位) */
+    /* 1fr 一格 */
+    grid-template-columns: repeat(3, 1fr);
+    /* gg20 格線間距 */
+    grid-gap: 20px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 20px 20px;
+    background: #eee;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 選取內容 */
+/* 第一個選取 空格 第二個選取 */
+.card img {
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.7s;
+    height: 300px;
+    /* 物件適應：封面 (避免圖片壓縮) */
+    object-fit: cover;
+    /* 物件位置：左右 上下 */
+    object-position: 2px 10px;
+}
+
+.card h2 {
+    text-align: center;
+    padding: 10px 0 0;
+    letter-spacing: 16px;
+}
+
+.card h4 {
+    text-align: center;
+    color: #1b9;
+    font-size: 12px;
+    font-weight: 100;
+    /* ls 文字間距 */
+    letter-spacing: 10px;
+}
+
+.card p {
+    height: 150px;
+    color: #666;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.card hr {
+    height: 2px;
+    background-color: #333;
+    margin: 10px 0;
+    width: 0;
+    border: 0;
+    transition: 0.7s;
+}
+
+/* 滑入卡片後設定水平線樣式 */
+.card:hover hr {
+    width: 100%;
+}
+
+.card:hover img {
+    opacity: 1;
+}
+
+/* 產品區愈 */
+#product {
+    height: 600px;
+    width: 1000px;
+    margin: 0 auto;
+    /* background-color: #333; */
+    /* 文字對齊：置中 (對行內元素調整對齊) */
+    text-align: center;
+    position: relative;
+}
+
+#info {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    /* background-color: #1b9; */
+    width: 260px;
+}
+
+/* 取得 #info 內的所有 h2 */
+#info h2 {
+    color: #F5BB23;
+    margin-bottom: 30px;
+    letter-spacing: 16px;
+}
+
+#info h6 {
+    color: #666;
+    margin-bottom: 30px;
+    letter-spacing: 6px;
+    font-size: 8px;
+}
+
+#info p {
+    text-align: left;
+    line-height: 3;
+    letter-spacing: 15px;
+}
+
+/* 經營理念 */
+#idea {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 30px;
+    width: 900px;
+    margin: 0 auto;
+}
+
+#idea-pic img {
+    width: 100%;
+    border: 8px solid #fff;
+}
+
+#idea-content {
+    line-height: 3;
+    letter-spacing: 10px;
+}
+
+#idea-content a {
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+#idea-content a:hover {
+    background-color: #333;
+    color: white;
+}
+
+footer {
+    background-image: url(./img/paper.png);
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #555;
+}
